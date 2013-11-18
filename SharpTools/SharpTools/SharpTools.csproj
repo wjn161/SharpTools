@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Convert\ConvertManager.cs" />
+    <Compile Include="Convert\TypeConverter.cs" />
     <Compile Include="Libs\Newtonsoft.Json\Bson\BsonBinaryType.cs" />
     <Compile Include="Libs\Newtonsoft.Json\Bson\BsonBinaryWriter.cs" />
     <Compile Include="Libs\Newtonsoft.Json\Bson\BsonObjectId.cs" />
@@ -217,6 +218,9 @@
     <Compile Include="Libs\Newtonsoft.Json\Utilities\TypeExtensions.cs" />
     <Compile Include="Libs\Newtonsoft.Json\Utilities\ValidationUtils.cs" />
     <Compile Include="Libs\Newtonsoft.Json\WriteState.cs" />
+    <Compile Include="Logger\FileLogger.cs" />
+    <Compile Include="Logger\ILog.cs" />
+    <Compile Include="Logger\LoggerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialization\SerializationManager.cs" />
   </ItemGroup>
@@ -226,19 +230,17 @@
     <Folder Include="Compression\" />
     <Folder Include="Data\" />
     <Folder Include="Drawing\" />
+    <Folder Include="Enum\" />
     <Folder Include="Exception\" />
-    <Folder Include="Http\" />
     <Folder Include="Image\" />
     <Folder Include="IO\" />
-    <Folder Include="Logger\" />
     <Folder Include="Mail\" />
-    <Folder Include="Office\" />
+    <Folder Include="Net\" />
     <Folder Include="Reflection\" />
+    <Folder Include="Regex\" />
     <Folder Include="Security\" />
-    <Folder Include="String\" />
     <Folder Include="Text\" />
     <Folder Include="Threading\" />
-    <Folder Include="Web\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

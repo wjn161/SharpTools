@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpTools", "SharpTools\SharpTools.csproj", "{3E81E702-05C9-4037-896A-1E4DD030ABCB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpTools.Tests", "SharpTools.Tests\SharpTools.Tests.csproj", "{D645064E-4319-4A2E-991C-AB05500DBB4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpTools.WindowsPhone", "SharpTools.WindowsPhone\SharpTools.WindowsPhone.csproj", "{0164E9C7-374D-4EDF-BE8C-F02DDBE06B18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpTools.Web", "SharpTools.Web\SharpTools.Web.csproj", "{949CC426-05F8-47A8-9DFB-EDA07020F1F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +27,10 @@ Global
 		{0164E9C7-374D-4EDF-BE8C-F02DDBE06B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0164E9C7-374D-4EDF-BE8C-F02DDBE06B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0164E9C7-374D-4EDF-BE8C-F02DDBE06B18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{949CC426-05F8-47A8-9DFB-EDA07020F1F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{949CC426-05F8-47A8-9DFB-EDA07020F1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{949CC426-05F8-47A8-9DFB-EDA07020F1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{949CC426-05F8-47A8-9DFB-EDA07020F1F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
