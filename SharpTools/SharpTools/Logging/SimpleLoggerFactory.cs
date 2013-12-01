@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SharpTools.Logger
+namespace SharpTools.Logging
 {
-    public interface ILog
+    class SimpleLoggerFactory
     {
-        
     }
 }

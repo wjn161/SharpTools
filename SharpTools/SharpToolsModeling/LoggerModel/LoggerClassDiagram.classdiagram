@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="9297454c-1651-4f06-8f27-50bcec3d72f9" name="LoggerClassDiagram" linkedPackageId="63b935b5-1086-4cea-861c-fc6c81c7d5ac" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="0be8eb3d-73f4-4f5a-b191-b9ca7611f597">
+      <profileInstance Id="44a1bdec-5bd9-4828-9f73-67cc78e94595" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c285ec7c-cddf-4fd2-bb38-724ad8415ce5">
+      <profileInstance Id="248885f3-b226-4dfc-a871-4a64ad3b011b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e56a0762-797a-4623-8e96-656644335fd5" name="LoggerManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fbafa06d-7959-4400-99ea-ffb7a5d7ae93" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="3d672703-0823-41b2-b1ca-b93e3ba841f4" name="ILog" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="affb1b80-7e75-4cd2-9cf7-bd33b84cc186" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="63b935b5-1086-4cea-861c-fc6c81c7d5ac" name="SharpToolsModeling">
+    <elementDefinition Id="7ab4bfdc-268c-4b49-bb09-d9d7574d5bdb" />
+  </package>
+</logicalClassDesignerModel>

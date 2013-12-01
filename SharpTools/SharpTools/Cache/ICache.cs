@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SharpTools.Logger
+namespace SharpTools.Cache
 {
-    public static class LoggerManager
+    public interface ICache
     {
-        
+
     }
 }

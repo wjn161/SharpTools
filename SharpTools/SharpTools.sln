@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpTools.WindowsPhone", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpTools.Web", "SharpTools.Web\SharpTools.Web.csproj", "{949CC426-05F8-47A8-9DFB-EDA07020F1F1}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SharpToolsModeling", "SharpToolsModeling\SharpToolsModeling.modelproj", "{FAC84A17-56E2-4481-B6A7-D54DADEF1234}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModelingProject", "ModelingProject", "{0BCDB6F3-9458-453D-8A6E-86489F4423CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,8 +35,15 @@ Global
 		{949CC426-05F8-47A8-9DFB-EDA07020F1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{949CC426-05F8-47A8-9DFB-EDA07020F1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{949CC426-05F8-47A8-9DFB-EDA07020F1F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC84A17-56E2-4481-B6A7-D54DADEF1234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC84A17-56E2-4481-B6A7-D54DADEF1234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC84A17-56E2-4481-B6A7-D54DADEF1234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC84A17-56E2-4481-B6A7-D54DADEF1234}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FAC84A17-56E2-4481-B6A7-D54DADEF1234} = {0BCDB6F3-9458-453D-8A6E-86489F4423CD}
 	EndGlobalSection
 EndGlobal

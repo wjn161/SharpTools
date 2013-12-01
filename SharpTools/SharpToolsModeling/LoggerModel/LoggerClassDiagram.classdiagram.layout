@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LoggerClassDiagram">
+  <logicalClassDesignerModelMoniker Id="9297454c-1651-4f06-8f27-50bcec3d72f9" />
+  <nestedChildShapes>
+    <classShape Id="c3a28843-d615-4887-b075-78111ad326d4" absoluteBounds="5, 1.625, 1.5, 0.95263671875" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="e56a0762-797a-4623-8e96-656644335fd5" LastKnownName="LoggerManager" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="74277b79-0b29-4409-b9b6-3490f6afa5ae" absoluteBounds="5.015, 2.015, 1.4700000000000002, 0.226318359375" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="6008ce03-8c29-4a21-96e5-ebc5963185b4" absoluteBounds="5.015, 2.251318359375, 1.4700000000000002, 0.226318359375" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <interfaceShape Id="438d35ff-35da-493b-abbb-a1eda25096e8" absoluteBounds="5, 2.875, 1.5, 0.95263671875" hideQualifiedName="false" increaseHeight="0" customColor="207, 223, 191">
+      <interfaceMoniker Id="3d672703-0823-41b2-b1ca-b93e3ba841f4" LastKnownName="ILog" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="4d8805ad-5e8d-45c7-8138-f940f8179bcf" absoluteBounds="5.0150000000000006, 3.265, 1.4700000000000002, 0.226318359375" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="56f1e629-d345-4073-8a55-64de2298ae14" absoluteBounds="5.0150000000000006, 3.501318359375, 1.4700000000000002, 0.226318359375" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </interfaceShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>
