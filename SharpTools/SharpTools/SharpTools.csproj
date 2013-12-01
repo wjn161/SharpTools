@@ -220,13 +220,11 @@
     <Compile Include="Libs\Newtonsoft.Json\Utilities\ValidationUtils.cs" />
     <Compile Include="Libs\Newtonsoft.Json\WriteState.cs" />
     <Compile Include="Logging\AbstractLoggerFactory.cs" />
-    <Compile Include="Logging\ConsoleLog.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\ConsoleLoggerFactory.cs" />
-    <Compile Include="Logging\LoggerCache.cs" />
-    <Compile Include="Logging\FileLogger.cs" />
-    <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\ILoggerFactory.cs" />
+    <Compile Include="Logging\LoggerCache.cs" />
+    <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\LoggerException.cs" />
     <Compile Include="Logging\LevelFilteredLogger.cs" />
     <Compile Include="Logging\LoggerLevel.cs" />

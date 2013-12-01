@@ -7,11 +7,18 @@ namespace SharpTools.Logging
 {
     public class LoggerManager : MarshalByRefObject
     {
-        public static ILogger CreateLogger<TFactory>(string name)
-         where TFactory : class, ILoggerFactory
+        public static ILogger Create<TLoggerFactory>(string loggerName)
+         where TLoggerFactory : class,ILoggerFactory
         {
-            ILoggerFactory factory = Activator.CreateInstance<TFactory>();
-            return factory.Create(name);
+            var factory = Activator.CreateInstance<TLoggerFactory>();
+            return factory.Create(loggerName);
+        }
+
+        public static ILogger Create<TLoggerFactory>(string loggerName, LoggerLevel level)
+         where TLoggerFactory : class,ILoggerFactory
+        {
+            var factory = Activator.CreateInstance<TLoggerFactory>();
+            return factory.Create(loggerName, level);
         }
     }
 }

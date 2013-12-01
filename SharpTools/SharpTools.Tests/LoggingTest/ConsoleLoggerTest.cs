@@ -10,12 +10,11 @@ namespace SharpTools.Tests.LoggingTest
     [TestFixture]
     public class ConsoleLoggerTest
     {
-        private static ConsoleLoggerFactory factory;
         private ILogger logger;
         [SetUp]
         public void Init()
         {
-            logger = LoggerManager.CreateLogger<ConsoleLoggerFactory>("consoleLogger");
+            logger = LoggerManager.Create<ConsoleLoggerFactory>("Hello", LoggerLevel.Error);
         }
         [Test]
         public void Console_Logger_Print_HelloWorld()
