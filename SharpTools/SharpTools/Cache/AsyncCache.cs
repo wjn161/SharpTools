@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SharpTools.Logging
+namespace SharpTools.Cache
 {
     internal static class TaskExtentions
     {
@@ -57,11 +57,11 @@ namespace SharpTools.Logging
     /// <summary>Debugger type proxy for AsyncCache.</summary>
     /// <typeparam name="TKey">Specifies the type of the cache's keys.</typeparam>
     /// <typeparam name="TValue">Specifies the type of the cache's values.</typeparam>
-    internal class LoggerCache_DebugView<TKey, TValue>
+    internal class AsyncCache_DebugView<TKey, TValue>
     {
-        private readonly LoggerCache<TKey, TValue> asyncCache;
+        private readonly AsyncCache<TKey, TValue> asyncCache;
 
-        internal LoggerCache_DebugView(LoggerCache<TKey, TValue> asyncCache)
+        internal AsyncCache_DebugView(AsyncCache<TKey, TValue> asyncCache)
         {
             this.asyncCache = asyncCache;
         }
@@ -76,9 +76,9 @@ namespace SharpTools.Logging
     /// <summary>Caches asynchronously retrieved data.</summary>
     /// <typeparam name="TKey">Specifies the type of the cache's keys.</typeparam>
     /// <typeparam name="TValue">Specifies the type of the cache's values.</typeparam>
-    [DebuggerTypeProxy(typeof(LoggerCache_DebugView<,>))]
+    [DebuggerTypeProxy(typeof(AsyncCache_DebugView<,>))]
     [DebuggerDisplay("Count={Count}")]
-    internal class LoggerCache<TKey, TValue> : ICollection<KeyValuePair<TKey, Task<TValue>>>
+    internal class AsyncCache<TKey, TValue> : ICollection<KeyValuePair<TKey, Task<TValue>>>
     {
         /// <summary>The factory to use to create tasks.</summary>
         private readonly Func<TKey, Task<TValue>> valueFactory;
@@ -87,7 +87,7 @@ namespace SharpTools.Logging
 
         /// <summary>Initializes the cache.</summary>
         /// <param name="valueFactory">A factory for producing the cache's values.</param>
-        public LoggerCache(Func<TKey, Task<TValue>> valueFactory)
+        public AsyncCache(Func<TKey, Task<TValue>> valueFactory)
         {
             if (valueFactory == null) throw new ArgumentNullException("valueFactory");
             this.valueFactory = valueFactory;

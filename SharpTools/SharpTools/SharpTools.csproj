@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
@@ -43,6 +44,7 @@
     <Compile Include="Cache\ICache.cs" />
     <Compile Include="Convert\ConvertManager.cs" />
     <Compile Include="Convert\TypeConverter.cs" />
+    <Compile Include="Exceptions\ExceptionHelper.cs" />
     <Compile Include="Libs\Newtonsoft.Json\Bson\BsonBinaryType.cs" />
     <Compile Include="Libs\Newtonsoft.Json\Bson\BsonBinaryWriter.cs" />
     <Compile Include="Libs\Newtonsoft.Json\Bson\BsonObjectId.cs" />
@@ -222,15 +224,15 @@
     <Compile Include="Logging\AbstractLoggerFactory.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\ConsoleLoggerFactory.cs" />
+    <Compile Include="Logging\EmailLogger.cs" />
+    <Compile Include="Logging\EmailLoggerFactory.cs" />
     <Compile Include="Logging\ILoggerFactory.cs" />
-    <Compile Include="Logging\LoggerCache.cs" />
+    <Compile Include="Cache\AsyncCache.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\LoggerException.cs" />
     <Compile Include="Logging\LevelFilteredLogger.cs" />
     <Compile Include="Logging\LoggerLevel.cs" />
     <Compile Include="Logging\LoggerManager.cs" />
-    <Compile Include="Logging\NullLogger.cs" />
-    <Compile Include="Logging\NullLoggerFactory.cs" />
     <Compile Include="Logging\SimpleLogger.cs" />
     <Compile Include="Logging\SimpleLoggerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -242,7 +244,6 @@
     <Folder Include="Data\" />
     <Folder Include="Drawing\" />
     <Folder Include="Enum\" />
-    <Folder Include="Exception\" />
     <Folder Include="Image\" />
     <Folder Include="IO\" />
     <Folder Include="Mail\" />
