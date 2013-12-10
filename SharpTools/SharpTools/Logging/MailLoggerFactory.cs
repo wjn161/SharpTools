@@ -5,7 +5,8 @@ using System.Text;
 
 namespace SharpTools.Logging
 {
-    class EmailLoggerFactory
+    public class MailLoggerFactory
     {
+
     }
 }

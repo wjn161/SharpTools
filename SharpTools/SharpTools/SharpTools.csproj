@@ -224,8 +224,8 @@
     <Compile Include="Logging\AbstractLoggerFactory.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\ConsoleLoggerFactory.cs" />
-    <Compile Include="Logging\EmailLogger.cs" />
-    <Compile Include="Logging\EmailLoggerFactory.cs" />
+    <Compile Include="Logging\MailLogger.cs" />
+    <Compile Include="Logging\MailLoggerFactory.cs" />
     <Compile Include="Logging\ILoggerFactory.cs" />
     <Compile Include="Cache\AsyncCache.cs" />
     <Compile Include="Logging\ILogger.cs" />
@@ -235,6 +235,7 @@
     <Compile Include="Logging\LoggerManager.cs" />
     <Compile Include="Logging\SimpleLogger.cs" />
     <Compile Include="Logging\SimpleLoggerFactory.cs" />
+    <Compile Include="Mail\SmtpMail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialization\SerializationManager.cs" />
   </ItemGroup>
@@ -246,7 +247,6 @@
     <Folder Include="Enum\" />
     <Folder Include="Image\" />
     <Folder Include="IO\" />
-    <Folder Include="Mail\" />
     <Folder Include="Net\" />
     <Folder Include="Reflection\" />
     <Folder Include="Regex\" />

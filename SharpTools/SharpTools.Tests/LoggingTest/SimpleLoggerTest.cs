@@ -17,7 +17,6 @@ namespace SharpTools.Tests.LoggingTest
         public void Init()
         {
             logger = LoggerManager.Create<SimpleLoggerFactory>("TestLogger", LoggerLevel.Error);
-
         }
 
         [Test]

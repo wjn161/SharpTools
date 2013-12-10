@@ -70,6 +70,7 @@ namespace SharpTools.Logging
             var config = ConfigurationManager.AppSettings["LoggerBaseDir"];
             return string.IsNullOrEmpty(config) ? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, logPath) : config;
         }
+
         protected override void Log(LoggerLevel loggerLevel, string loggerName, string message, Exception exception)
         {
             string defaultPath;
