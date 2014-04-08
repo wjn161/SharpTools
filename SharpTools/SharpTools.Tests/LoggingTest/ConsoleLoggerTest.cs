@@ -14,7 +14,7 @@ namespace SharpTools.Tests.LoggingTest
         [SetUp]
         public void Init()
         {
-            logger = ConsoleLoggerFactory.Create("Hello", LoggerLevel.Info);
+            logger = ConsoleLoggerFactory.Create("Hello", LoggerLevel.Error);
         }
         [Test]
         public void Console_Logger_Print_HelloWorld()

@@ -67,6 +67,10 @@ namespace SharpTools.Logging
         /// <param name = "message">The message to log</param>
         public void Info(string message)
         {
+            if (!IsInfoEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Info, message, null);
         }
 
@@ -77,6 +81,10 @@ namespace SharpTools.Logging
         /// <param name = "message">The message to log</param>
         public void Info(string message, Exception exception)
         {
+            if (!IsInfoEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Info, message, exception);
         }
 
@@ -87,6 +95,10 @@ namespace SharpTools.Logging
         /// <param name = "args">Format arguments for the message to log</param>
         public void Info(string format, params object[] args)
         {
+            if (!IsInfoEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Info, String.Format(CultureInfo.CurrentCulture, format, args), null);
         }
 
@@ -98,6 +110,10 @@ namespace SharpTools.Logging
         /// <param name = "args">Format arguments for the message to log</param>
         public void Info(Exception exception, string format, params object[] args)
         {
+            if (!IsInfoEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Info, String.Format(CultureInfo.CurrentCulture, format, args), exception);
         }
 
@@ -109,6 +125,10 @@ namespace SharpTools.Logging
         /// <param name = "args">Format arguments for the message to log</param>
         public void Info(IFormatProvider formatProvider, string format, params object[] args)
         {
+            if (!IsInfoEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Info, String.Format(formatProvider, format, args), null);
         }
 
@@ -121,6 +141,10 @@ namespace SharpTools.Logging
         /// <param name = "args">Format arguments for the message to log</param>
         public void Info(Exception exception, IFormatProvider formatProvider, string format, params object[] args)
         {
+            if (!IsInfoEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Info, String.Format(formatProvider, format, args), exception);
         }
 
@@ -134,7 +158,10 @@ namespace SharpTools.Logging
         /// <param name = "message">The message to log</param>
         public void Error(string message)
         {
-          
+            if (!IsErrorEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Error, message, null);
         }
 
@@ -145,6 +172,10 @@ namespace SharpTools.Logging
         /// <param name = "message">The message to log</param>
         public void Error(string message, Exception exception)
         {
+            if (!IsErrorEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Error, message, exception);
         }
 
@@ -155,6 +186,10 @@ namespace SharpTools.Logging
         /// <param name = "args">Format arguments for the message to log</param>
         public void Error(string format, params object[] args)
         {
+            if (!IsErrorEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Error, String.Format(CultureInfo.CurrentCulture, format, args), null);
         }
 
@@ -166,6 +201,10 @@ namespace SharpTools.Logging
         /// <param name = "args">Format arguments for the message to log</param>
         public void Error(Exception exception, string format, params object[] args)
         {
+            if (!IsErrorEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Error, String.Format(CultureInfo.CurrentCulture, format, args), exception);
         }
 
@@ -177,6 +216,10 @@ namespace SharpTools.Logging
         /// <param name = "args">Format arguments for the message to log</param>
         public void Error(IFormatProvider formatProvider, string format, params object[] args)
         {
+            if (!IsErrorEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Error, String.Format(formatProvider, format, args), null);
         }
 
@@ -189,6 +232,10 @@ namespace SharpTools.Logging
         /// <param name = "args">Format arguments for the message to log</param>
         public void Error(Exception exception, IFormatProvider formatProvider, string format, params object[] args)
         {
+            if (!IsErrorEnabled)
+            {
+                return;
+            }
             Log(LoggerLevel.Error, String.Format(formatProvider, format, args), exception);
         }
 
@@ -218,7 +265,27 @@ namespace SharpTools.Logging
 
         private void Log(LoggerLevel loggerLevel, String message, Exception exception)
         {
+
             Log(loggerLevel, Name, message, exception);
+        }
+
+
+
+        /// <summary>
+        ///   Determines if messages of priority "info" will be logged.
+        /// </summary>
+        /// <value><c>true</c> if log level flags include the <see cref = "LoggerLevel.Info" /> bit</value>
+        public bool IsInfoEnabled
+        {
+            get { return (Level >= LoggerLevel.Info); }
+        }
+        /// <summary>
+        ///   Determines if messages of priority "error" will be logged.
+        /// </summary>
+        /// <value><c>true</c> if log level flags include the <see cref = "LoggerLevel.Error" /> bit</value>
+        public bool IsErrorEnabled
+        {
+            get { return (Level >= LoggerLevel.Error); }
         }
     }
 }
