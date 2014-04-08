@@ -70,11 +70,6 @@ namespace SharpTools.Logging
             Log(LoggerLevel.Info, message, null);
         }
 
-        public void Info(Func<string> messageFactory)
-        {
-            Log(LoggerLevel.Info, messageFactory.Invoke(), null);
-        }
-
         /// <summary>
         ///   Logs an info message.
         /// </summary>
@@ -141,11 +136,6 @@ namespace SharpTools.Logging
         {
           
             Log(LoggerLevel.Error, message, null);
-        }
-
-        public void Error(Func<string> messageFactory)
-        {
-            Log(LoggerLevel.Error, messageFactory.Invoke(), null);
         }
 
         /// <summary>
