@@ -11,16 +11,16 @@ using SharpTools.Exceptions;
 
 namespace SharpTools.Logging
 {
-    public class SimpleLogger : LevelFilteredLogger
+    public class FileLogger : BaseLogger
     {
         static readonly ConcurrentQueue<string> loggerQueue = new ConcurrentQueue<string>();
         /// <summary>
         ///   Creates a new ConsoleLogger with the <c>Level</c>
-        ///   set to <c>LoggerLevel.Debug</c> and the <c>Name</c>
+        ///   set to <c>LoggerLevel.Info</c> and the <c>Name</c>
         ///   set to <c>String.Empty</c>.
         /// </summary>
-        public SimpleLogger()
-            : this(String.Empty, LoggerLevel.Debug)
+        public FileLogger()
+            : this(String.Empty, LoggerLevel.Info)
         {
         }
 
@@ -29,18 +29,18 @@ namespace SharpTools.Logging
         ///   set to <c>String.Empty</c>.
         /// </summary>
         /// <param name = "logLevel">The logs Level.</param>
-        public SimpleLogger(LoggerLevel logLevel)
+        public FileLogger(LoggerLevel logLevel)
             : this(String.Empty, logLevel)
         {
         }
 
         /// <summary>
         ///   Creates a new ConsoleLogger with the <c>Level</c>
-        ///   set to <c>LoggerLevel.Debug</c>.
+        ///   set to <c>LoggerLevel.Info</c>.
         /// </summary>
         /// <param name = "name">The logs Name.</param>
-        public SimpleLogger(String name)
-            : this(name, LoggerLevel.Debug)
+        public FileLogger(String name)
+            : this(name, LoggerLevel.Info)
         {
         }
 
@@ -49,21 +49,11 @@ namespace SharpTools.Logging
         /// </summary>
         /// <param name = "name">The logs Name.</param>
         /// <param name = "logLevel">The logs Level.</param>
-        public SimpleLogger(String name, LoggerLevel logLevel)
+        public FileLogger(String name, LoggerLevel logLevel)
             : base(name, logLevel)
         {
         }
-
-        public override ILogger CreateChildLogger(string loggerName)
-        {
-            if (loggerName == null)
-            {
-                throw new ArgumentNullException("loggerName", "To create a child logger you must supply a non null name");
-            }
-
-            return new ConsoleLogger(String.Format(CultureInfo.CurrentCulture, "{0}.{1}", Name, loggerName), Level);
-
-        }
+        
 
         private static string GetBaseDir(string logPath)
         {
@@ -83,16 +73,15 @@ namespace SharpTools.Logging
                     Directory.CreateDirectory(defaultPath);
                 }
                 fileName = Path.Combine(defaultPath, string.Format("{0}.log", ExceptionHelper.GetExcepitonName(exception)));//文件名称
-                log = string.Format("[{0}][{1}] => {2}{3}:{4}{5}{6}{7}{8}",
+                log = string.Format("[{0}][{1}] =>{3}UserMessage:{2}{3}{4}:{5}{3}{6}{7}{3}",
                    loggerName,
                    DateTime.Now,
                    message,
-                   exception.GetType().FullName,
-                   exception.Message,
-                   exception.StackTrace,
                    Environment.NewLine,
-                   string.Empty.PadRight(200, '-'),
-                   Environment.NewLine);
+                   exception.GetType().FullName,
+                   ExceptionHelper.GetExcepitonMessage(exception),
+                   Environment.NewLine,
+                   string.Empty.PadRight(200, '-'));
             }
             else
             {

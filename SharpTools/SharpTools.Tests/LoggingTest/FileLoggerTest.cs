@@ -10,19 +10,19 @@ using SharpTools.Logging;
 namespace SharpTools.Tests.LoggingTest
 {
     [TestFixture]
-    public class SimpleLoggerTest
+    public class FileLoggerTest
     {
         private ILogger logger;
         [SetUp]
         public void Init()
         {
-            logger = LoggerManager.Create<SimpleLoggerFactory>("TestLogger", LoggerLevel.Error);
+            logger = FileLoggerFactory.Create("TestLogger");
         }
 
         [Test]
         public void File_Should_Be_Create_And_Logging()
         {
-            logger.Error("Hello");
+            logger.Error("HHHH");
         }
         [Test]
         public void File_Should_Be_Create_And_Exception()
@@ -42,7 +42,7 @@ namespace SharpTools.Tests.LoggingTest
         {
             while (true)
             {
-                Parallel.For(1, 1000, (i) =>
+                Parallel.For(1, 10, (i) =>
                 {
                     var b = 0;
                     try
@@ -56,7 +56,7 @@ namespace SharpTools.Tests.LoggingTest
                 });
                 Thread.Sleep(1);
             }
-           
+
 
         }
     }

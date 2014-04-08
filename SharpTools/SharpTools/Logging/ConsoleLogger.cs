@@ -6,15 +6,15 @@ using System.Text;
 
 namespace SharpTools.Logging
 {
-    public class ConsoleLogger : LevelFilteredLogger
+    public class ConsoleLogger : BaseLogger
     {
         /// <summary>
         ///   Creates a new ConsoleLogger with the <c>Level</c>
-        ///   set to <c>LoggerLevel.Debug</c> and the <c>Name</c>
+        ///   set to <c>LoggerLevel.Info</c> and the <c>Name</c>
         ///   set to <c>String.Empty</c>.
         /// </summary>
         public ConsoleLogger()
-            : this(String.Empty, LoggerLevel.Debug)
+            : this(String.Empty, LoggerLevel.Info)
         {
         }
 
@@ -30,11 +30,11 @@ namespace SharpTools.Logging
 
         /// <summary>
         ///   Creates a new ConsoleLogger with the <c>Level</c>
-        ///   set to <c>LoggerLevel.Debug</c>.
+        ///   set to <c>LoggerLevel.Info</c>.
         /// </summary>
         /// <param name = "name">The logs Name.</param>
         public ConsoleLogger(String name)
-            : this(name, LoggerLevel.Debug)
+            : this(name, LoggerLevel.Info)
         {
         }
 
@@ -64,22 +64,6 @@ namespace SharpTools.Logging
                 Console.Out.WriteLine("[{0}] '{1}' {2}: {3} {4}", loggerLevel, loggerName, exception.GetType().FullName,
                                       exception.Message, exception.StackTrace);
             }
-        }
-
-        ///<summary>
-        ///  Returns a new <c>ConsoleLogger</c> with the name
-        ///  added after this loggers name, with a dot in between.
-        ///</summary>
-        ///<param name = "loggerName">The added hierarchical name.</param>
-        ///<returns>A new <c>ConsoleLogger</c>.</returns>
-        public override ILogger CreateChildLogger(string loggerName)
-        {
-            if (loggerName == null)
-            {
-                throw new ArgumentNullException("loggerName", "To create a child logger you must supply a non null name");
-            }
-
-            return new ConsoleLogger(String.Format(CultureInfo.CurrentCulture, "{0}.{1}", Name, loggerName), Level);
         }
     }
 }

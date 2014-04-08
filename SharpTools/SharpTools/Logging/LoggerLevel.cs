@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SharpTools.Logging
 {
+    /// <summary>
+    /// Levels of logger
+    /// </summary>
     public enum LoggerLevel
     {
         /// <summary>
@@ -12,24 +15,12 @@ namespace SharpTools.Logging
         /// </summary>
         Off = 0,
         /// <summary>
-        ///   Fatal logging level
+        /// Logging errors
         /// </summary>
-        Fatal = 1,
+        Error = 1,
         /// <summary>
-        ///   Error logging level
+        /// Logging infomation
         /// </summary>
-        Error = 2,
-        /// <summary>
-        ///   Warn logging level
-        /// </summary>
-        Warn = 3,
-        /// <summary>
-        ///   Info logging level
-        /// </summary>
-        Info = 4,
-        /// <summary>
-        ///   Debug logging level
-        /// </summary>
-        Debug = 5,
+        Info = 2
     }
 }

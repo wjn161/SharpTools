@@ -14,18 +14,18 @@ namespace SharpTools.Tests.LoggingTest
         [SetUp]
         public void Init()
         {
-            logger = LoggerManager.Create<ConsoleLoggerFactory>("Hello", LoggerLevel.Error);
+            logger = ConsoleLoggerFactory.Create("Hello", LoggerLevel.Info);
         }
         [Test]
         public void Console_Logger_Print_HelloWorld()
         {
-            logger.Error("Hello World");
+            logger.Error("Hello world");
             Assert.AreEqual(1, 1);
         }
         [Test]
         public void Console_Logger_Print_HelloWorld_Too()
         {
-            logger.Debug("Hello World Too");
+            logger.Info("Hello World Too");
             Assert.AreEqual(1, 1);
         }
     }
